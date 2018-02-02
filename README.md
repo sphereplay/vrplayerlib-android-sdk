@@ -1,10 +1,9 @@
 VrPlayerLib SDK for Android
 ====================================
 
-Introduction
-------------------------------------
-
 VrPlayerLib for Android let you display immersive media content embeded in an Android app.
+
+© VIMERSIV INC. 2018 - All Rights Reserved. SpherePlay is a registered trademark.
 
 Usage
 ------------------------------------
@@ -26,10 +25,6 @@ VrPlayerLib.registerLicenseKey("YOUR-LICENSE-KEY");
 ```
 
 ### Player Manipulation
-
-There are many ways to manipulate the player...
-
-_See our samples for details_
 
 #### Method #1: Stand-alone Activity
 

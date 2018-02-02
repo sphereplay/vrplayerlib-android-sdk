@@ -1,6 +1,6 @@
 package com.sphereplay.vrplayerlib.samples.video360;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
 import com.sphereplay.vrplayerlib.VrPlayerConfig;
@@ -10,7 +10,7 @@ import com.sphereplay.vrplayerlib.VrPlayerProjectionType;
 import com.sphereplay.vrplayerlib.VrPlayerStereoFormat;
 import com.sphereplay.vrplayerlib.VrPlayerView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private enum VrPlayerUsageMethod {
         STANDALONE_ACTIVITY,
@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         // First things first, register you license
         // For a trial license key, please contact us info@sphereplay.com
-        VrPlayerLib.registerLicenseKey(this, "sphereplay", "YOUR-LICENSE-KEY-HERE");
+        // NOTE: To use you own credentials, please see the `build.gradle` script
+        VrPlayerLib.registerLicenseKey(this, BuildConfig.SPHEREPLAY_CUSTOMER_ID, BuildConfig.SPHEREPLAY_LICENSE_KEY);
 
         // Hide the android system bars
         // Required for a better fullscreen experience on certain devices with on-screen buttons
@@ -34,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Change player configuration
         VrPlayerConfig config = new VrPlayerConfig();
-        config.setVrMode(true);
-        config.setVrModeTransition(false);
+        //config.setBgColor("#999999");
+        //config.setBgImageUrl("https://farm5.staticflickr.com/4709/39932776151_a54833cf44_o_d.jpg");
+        //config.setVrMode(true);
+        //config.setVrModeTransition(false);
         config.setAutoPlay(true);
 
         // Set up a media to play
